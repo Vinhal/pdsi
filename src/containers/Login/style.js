@@ -63,17 +63,17 @@ const StyledSubtitle = styled(Typography)`
 
 const StyledButton = styled(Button)`
     && {
-        margin-top: 20px;
+        margin-top: 35px;
         border-radius: 5px;
         width: 80%;
     }
 `
 
 const StyledText = styled(Typography)`
-    padding-top: 15px;
+    padding-top: 8px;
     font-style: italic;
     font-weight: 400;
-    color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.secondary.main};
 `
 
 export {

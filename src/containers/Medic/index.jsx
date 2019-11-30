@@ -25,10 +25,10 @@ const Home = ({
         setSource({
             count: 10,
             datasource: [
-                { name: 'Japa do Japão', work: 'Madrecor', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$1000,00' },
-                { name: 'Ritiopa', work: 'Madrecor', specialty: 'Butecologista', crm: '00000000-0', consultValue: 'R$1000,00' },
-                { name: 'Duds', work: 'Madrecor', specialty: 'Odontologista', crm: '00000000-0', consultValue: 'R$1000,00' },
-                { name: 'Vinhal', work: 'Madrecor', specialty: 'Nenhuma', crm: '00000000-0', consultValue: 'R$1000,00' },
+                { id: 1, name: 'Japa do Japão', work: 'Madrecor', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$1000,00' },
+                { id: 2, name: 'Ritiopa', work: 'Madrecor', specialty: 'Butecologista', crm: '00000000-0', consultValue: 'R$1000,00' },
+                { id: 3, name: 'Duds', work: 'Madrecor', specialty: 'Odontologista', crm: '00000000-0', consultValue: 'R$1000,00' },
+                { id: 4, name: 'Vinhal', work: 'Madrecor', specialty: 'Nenhuma', crm: '00000000-0', consultValue: 'R$1000,00' },
             ],
         })
     }, [])
@@ -44,7 +44,7 @@ const Home = ({
                         headers={headers}
                         rowNames={rowNames}
                         // customElements={() => {}}
-                        onEdit={() => {}}
+                        onEdit={(row) => history.push(`/medics/${row.id}/edit`)}
 
                         page={page}
                         count={count}

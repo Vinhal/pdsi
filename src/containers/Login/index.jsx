@@ -29,12 +29,12 @@ const Login = ({ history }) => {
             <Container>
                 <ActivityBar />
                 <AuthContainer>
-                    { <img src={Logo} alt="Logo" style={{ marginTop: '10px', width: '18%' }} /> }
-                    <Tabs value={0} indicatorColor="primary" textColor="primary">
+                    <img src={Logo} alt="Logo" style={{ marginTop: '10px', width: '18%' }} />
+                    <Tabs value={0} indicatorColor="secondary" textColor="secondary">
                         <Tab label="Login" />
                         <Tab label="Registrar" />
                     </Tabs>
-                    <div style={{ marginTop: '20px' }}>
+                    <div style={{ marginTop: '20px', width: '80%' }}>
                         <Input
                             name="login-input"
                             label="Login"
@@ -57,7 +57,11 @@ const Login = ({ history }) => {
                                 )
                             }}
                         />
-                        <StyledButton variant="contained" color="primary" >
+                        <StyledButton
+                            variant="contained"
+                            color="secondary"
+                            onClick={() => history.push('/')}
+                        >
                             Acessar
                         </StyledButton>
                         <StyledText>

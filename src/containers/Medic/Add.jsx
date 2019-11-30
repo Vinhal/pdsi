@@ -18,17 +18,19 @@ const initialValues = {
     address: '',
 }
 
+const mockedJapa = { id: 1, name: 'Japa do Japão', work: 'Madrecor', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$1000,00', cpf: '000.000.000-00', address: 'Mansão Milionária' }
+
 const UpdateMedic = ({ history }) => {
     const [medicToEdit, setMedicToEdit] = useState(null)
     const { id } = useParams()
 
     useEffect(() => {
-        console.log('HEEEEEEEEEEEEEEE')
-        setMedicToEdit(null)
+        if (!id) return
+        setMedicToEdit(mockedJapa)
     }, [id])
 
-    const handleSave = values => {
-        console.log('SUBMITTED')
+    const handleSave = (values) => {
+        console.log('SUBMITTED', values)
     }
 
     return (
@@ -39,8 +41,9 @@ const UpdateMedic = ({ history }) => {
             </Text>
 
             <Formik
-                initialValues={initialValues}
+                enableReinitialize
                 onSubmit={handleSave}
+                initialValues={medicToEdit || initialValues}
                 render={({ values, setFieldValue }) => (
                     <Form>
                         <Grid item xs={12} md={8} lg={6}>
@@ -97,7 +100,7 @@ const UpdateMedic = ({ history }) => {
                             />
                             <Button
                                 type="submit"
-                                label="Cadastrar"
+                                label="Salvar"
                                 onClick={() => history.push('/medics/add')}
                             />
                         </ButtonContainer>
