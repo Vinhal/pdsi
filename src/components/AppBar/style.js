@@ -43,7 +43,7 @@ const LogoContainer = styled(Link)`
     margin: auto;
     width: 150px;
     height: 100%;
-    margin-left: ${({ theme }) => theme.spacing.unit * 7}px;
+    margin-left: ${({ theme }) => theme.spacing.unit * 5.2}px;
 
     ${({ theme }) => css`${theme.breakpoints.down('xs')} {
         margin-left: ${({ theme }) => theme.spacing.unit}px;

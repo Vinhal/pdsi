@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Link as RouteLink } from 'react-router-dom'
 import { ListItemIcon, ListItemText } from '@material-ui/core'
 
-import { isActive, getIcon } from './util'
+import { getIcon } from './util'
 import { ItemText, ListItem } from './style'
 
 const Item = ({ item, pathname }) => {

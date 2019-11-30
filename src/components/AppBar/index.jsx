@@ -17,12 +17,12 @@ const AppBar = ({ openSidebar, title, hasLogin }) => (
     <StyledAppBar>
         <StyledToolbar>
             <StyledIconButton disabled={!hasLogin} color="inherit" aria-label="Menu" onClick={openSidebar}>
-                {hasLogin && <MenuIcon />}
+                <MenuIcon color="inherit" />
             </StyledIconButton>
 
-            {<LogoContainer to="/">
-                <img alt="LOGO" src={LogoMagalu} style={{ width: '60%', height: '100%' }} />
-            </LogoContainer>}
+            <LogoContainer to="/">
+                <img alt="LOGO" src={LogoMagalu} style={{ width: '50%' }} />
+            </LogoContainer>
 
             <Title variant="h6" size={sideBarSize} noWrap>
                 <Hidden smDown implementation="css">

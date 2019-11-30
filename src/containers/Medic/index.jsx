@@ -25,10 +25,12 @@ const Home = ({
         setSource({
             count: 10,
             datasource: [
-                { id: 1, name: 'Japa do Japão', work: 'Madrecor', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$1000,00' },
-                { id: 2, name: 'Ritiopa', work: 'Madrecor', specialty: 'Butecologista', crm: '00000000-0', consultValue: 'R$1000,00' },
-                { id: 3, name: 'Duds', work: 'Madrecor', specialty: 'Odontologista', crm: '00000000-0', consultValue: 'R$1000,00' },
-                { id: 4, name: 'Vinhal', work: 'Madrecor', specialty: 'Nenhuma', crm: '00000000-0', consultValue: 'R$1000,00' },
+                { id: 2, name: 'Ritiopa', work: 'SUS', specialty: 'Butecologista', crm: '00000000-0', consultValue: 'R$ 10,00' },
+                { id: 3, name: 'Dudis', work: 'Madrecor', specialty: 'Odontologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+                { id: 1, name: 'Japa do Japão', work: 'PetShop', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+                { id: 4, name: 'Vinal', work: 'Madrecor', specialty: 'Nenhuma', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+                { id: 4, name: 'Mataus', work: 'SUS', specialty: 'Ginecologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+                { id: 4, name: 'Louis', work: 'Madrecor', specialty: 'Nutricionista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
             ],
         })
     }, [])

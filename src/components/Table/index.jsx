@@ -58,6 +58,7 @@ const Table = ({
 
 Table.propTypes = {
     id: PropTypes.string.isRequired,
+    count: PropTypes.any,
     headers: PropTypes.array,
     rows: PropTypes.array,
     rowNames: PropTypes.array,

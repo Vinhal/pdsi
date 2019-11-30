@@ -22,7 +22,6 @@ const RowTableCell = styled(TableCell)`
         border: none;
         padding-top: 0;
         padding-bottom: 0;
-        padding-right: 5px;
     }
 `
 
