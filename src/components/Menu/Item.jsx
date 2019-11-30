@@ -7,10 +7,9 @@ import { ListItemIcon, ListItemText } from '@material-ui/core'
 import { isActive, getIcon } from './util'
 import { ItemText, ListItem } from './style'
 
-const Item = ({ item, showSubItems, pathname }) => {
-    const { id, link, title, subItems, icon, isAdminOnly } = item
+const Item = ({ item, pathname }) => {
+    const { id, link, title, icon, selected } = item
 
-    const selected = isActive(pathname, link)
     const IconComponent = getIcon(icon)
 
     return (
@@ -43,7 +42,8 @@ Item.propTypes = {
         link: PropTypes.string,
         title: PropTypes.string,
         subItems: PropTypes.array,
-        isAdminOnly: PropTypes.bool
+        isAdminOnly: PropTypes.bool,
+        selected: PropTypes.any,
     })
 }
 

@@ -2,7 +2,32 @@
     {
         "title": "Página Inicial",
         "link": "/",
-        "icon": "home",
-        "id": "menu-home"
+        "icon": "home"
+    },
+    {
+        "title": "Médicos",
+        "link": "/",
+        "icon": "medic",
+        "selected": true
+    },
+    {
+        "title": "Clínicas",
+        "link": "/",
+        "icon": "clinic"
+    },
+    {
+        "title": "Laboratórios",
+        "link": "/",
+        "icon": "lab"
+    },
+    {
+        "title": "Exames",
+        "link": "/",
+        "icon": "exam"
+    },
+    {
+        "title": "Consultas",
+        "link": "/",
+        "icon": "consult"
     }
 ]

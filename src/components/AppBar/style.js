@@ -8,6 +8,7 @@ const StyledAppBar = styled(AppBar)`
         flex-direction: row;
         background: ${({ theme }) => `linear-gradient(106.31deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.baby} 158.83%)`};
         box-shadow: none;
+        height: 50px;
     }
 `
 const Title = styled(Typography)`
