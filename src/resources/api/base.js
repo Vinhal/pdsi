@@ -1,8 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
 import defaultsDeep from 'lodash.defaultsdeep'
-import loading from 'commons/utils/loading'
-import { onResponseError } from './interceptors'
 
 const getConfig = () => ({
     headers: {
@@ -21,15 +19,10 @@ const base = (baseURL, config = {}) => {
 
     axiosApi.request = (path, options) => {
         const mergedOptions = defaultsDeep(options, getConfig())
-        const loadingId = mergedOptions.loader && loading.show()
 
         return axiosApi(path, mergedOptions)
-            .then((resp) => {
-                if (loadingId) loading.close(loadingId)
-                return mergedOptions.full ? resp : resp.data
-            })
+            .then((resp) => resp.data)
             .catch((error) => {
-                if (loadingId) loading.close(loadingId)
                 throw error
             })
     }
