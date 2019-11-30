@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 
-import bgImage from 'assets/images/house.jpeg'
+import bgImage from 'assets/images/login-img.jpeg'
 
 const Main = styled.div`
     background: #e5e9ea;
@@ -63,13 +63,14 @@ const StyledSubtitle = styled(Typography)`
 
 const StyledButton = styled(Button)`
     && {
-        margin-top: 60px;
+        margin-top: 20px;
         border-radius: 5px;
         width: 80%;
     }
 `
 
 const StyledText = styled(Typography)`
+    padding-top: 15px;
     font-style: italic;
     font-weight: 400;
     color: ${({ theme }) => theme.palette.primary.main};

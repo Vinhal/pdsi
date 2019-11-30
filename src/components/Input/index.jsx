@@ -6,7 +6,7 @@ const Activity = ({ name, label, ...props }) => (
         id={name}
         label={label}
         margin="normal"
-        style={{ width: '100%' }}
+        style={{ width: '80%' }}
         variant="outlined"
         InputLabelProps={{
             shrink: true,
