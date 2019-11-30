@@ -1,13 +1,13 @@
 import { lazy } from 'react'
-// import Layout from 'containers/Main/Layout'
+import Layout from 'containers/Main/Layout'
 
-const LoginScreen = lazy(() => import('containers/Login'))
+const HomeScreen = lazy(() => import('containers/Home'))
 
 const Login = [
     {
-        path: '/login',
-        component: LoginScreen,
-        // layout: Layout,
+        path: '/',
+        component: HomeScreen,
+        layout: Layout,
         exact: true,
         isProtected: false,
         title: ''

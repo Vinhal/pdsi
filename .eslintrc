@@ -3,7 +3,6 @@
     "browser": true
   },
   "extends": [
-    "@softboxlab/eslint-config-gandalf-lint",
     "plugin:react/recommended"
   ],
   "parser": "babel-eslint",
