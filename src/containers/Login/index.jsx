@@ -7,7 +7,6 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 import Visibility from '@material-ui/icons/Visibility'
 import Input from 'components/Input'
 import Logo from 'assets/images/pocket-logo.png'
-import { Main, Container, ActivityBar } from './style'
 import {
     Main,
     AuthContainer,
@@ -58,21 +57,12 @@ const Login = ({ history }) => {
                                 )
                             }}
                         />
-<<<<<<< HEAD
                         <StyledButton variant="contained" color="primary" >
                             Acessar
                         </StyledButton>
                         <StyledText>
                             Esqueci a senha
                         </StyledText>
-=======
-                        <StyledText>
-                            Esqueci a senha
-                        </StyledText>
-                        <StyledButton variant="contained" color="primary" onClick={auth} >
-                            Acessar
-                        </StyledButton>
->>>>>>> 0eac85742fd54bf458077c6e3b4191858af95c69
                     </div>
                 </AuthContainer>
             </Container>
