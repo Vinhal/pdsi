@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Hidden from '@material-ui/core/Hidden'
 import MenuIcon from '@material-ui/icons/Menu'
-// import LogoMagalu from 'assets/svg/logo.svg'
+import LogoMagalu from 'assets/images/pocket-logo2.png'
 import { sideBarSize } from 'commons/constants'
 import UserButton from './UserButton'
 import {
@@ -20,9 +20,9 @@ const AppBar = ({ openSidebar, title, hasLogin }) => (
                 {hasLogin && <MenuIcon />}
             </StyledIconButton>
 
-            {/* <LogoContainer to="/">
-                <img alt="LOGO" src={LogoMagalu} style={{ width: '100%', height: '100%' }} />
-            </LogoContainer> */}
+            {<LogoContainer to="/">
+                <img alt="LOGO" src={LogoMagalu} style={{ width: '60%', height: '100%' }} />
+            </LogoContainer>}
 
             <Title variant="h6" size={sideBarSize} noWrap>
                 <Hidden smDown implementation="css">
