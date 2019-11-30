@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Visibility from '@material-ui/icons/Visibility'
 import Input from 'components/Input'
-import Logo from 'assets/images/logo.jpeg'
+import Logo from 'assets/images/pocket-logo.png'
 import {
     Main,
     AuthContainer,
@@ -29,12 +29,12 @@ const Login = ({ history }) => {
             <Container>
                 <ActivityBar />
                 <AuthContainer>
-                    {/* <img src={Logo} alt="Logo" style={{ marginTop: '30px' }} /> */}
-                    <Tabs value={0} indicatorColor="primary" textColor="primary" style={{ marginTop: '20px' }}>
+                    { <img src={Logo} alt="Logo" style={{ marginTop: '10px', width: '18%' }} /> }
+                    <Tabs value={0} indicatorColor="primary" textColor="primary">
                         <Tab label="Login" />
                         <Tab label="Registrar" />
                     </Tabs>
-                    <div style={{ marginTop: '45px' }}>
+                    <div style={{ marginTop: '20px' }}>
                         <Input
                             name="login-input"
                             label="Login"
@@ -57,12 +57,12 @@ const Login = ({ history }) => {
                                 )
                             }}
                         />
+                        <StyledButton variant="contained" color="primary" >
+                            Acessar
+                        </StyledButton>
                         <StyledText>
                             Esqueci a senha
                         </StyledText>
-                        <StyledButton variant="contained" color="primary" onClick={auth} >
-                            Acessar
-                        </StyledButton>
                     </div>
                 </AuthContainer>
             </Container>
