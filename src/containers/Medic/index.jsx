@@ -4,11 +4,13 @@ import Paper from '@material-ui/core/Paper'
 import Text from '@material-ui/core/Typography'
 import withTable from 'components/Table/withTable'
 import Table from 'components/Table'
+import Button from 'components/Button'
 
 const headers = ['Nome', 'CRM', 'Hospital', 'Especilidade', 'Valor da Consulta']
 const rowNames = ['name', 'crm' , 'work', 'specialty', 'consultValue']
 
 const Home = ({
+    history,
     datasource,
     count,
     setSource,
@@ -54,11 +56,17 @@ const Home = ({
                     />
                 </div>
             </Paper>
+            <Button
+                label="Cadastrar Médico"
+                style={{ float: 'right', marginTop: '20px' }}
+                onClick={() => history.push('/medics/add')}
+            />
         </div>
     )
 }
 
 Home.propTypes = {
+    history: PropTypes.any,
     datasource: PropTypes.array,
     count: PropTypes.number,
     setSource: PropTypes.func,
