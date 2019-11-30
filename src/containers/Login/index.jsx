@@ -1,22 +1,28 @@
 import React, { useState } from 'react'
-import {
-    AuthContainer,
-    StyledButton,
-    StyledText
-} from './style'
+import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Visibility from '@material-ui/icons/Visibility'
 import Input from 'components/Input'
 import Logo from 'assets/images/logo.jpeg'
-import { Main, Container, ActivityBar } from './style'
+import {
+    Main,
+    AuthContainer,
+    StyledButton,
+    StyledText,
+    Container,
+    ActivityBar,
+} from './style'
 
-const Activity = () => {
+const Login = ({ history }) => {
     const [showPassword, setShowPassword] = useState(false)
     const [info, setInfo] = useState({ login: '', password: '' })
+
+    const auth = () => {
+        history.push('/')
+    }
 
     return (
         <Main>
@@ -33,17 +39,18 @@ const Activity = () => {
                             name="login-input"
                             label="Login"
                             value={info.login}
-                            onChange={console.log}
+                            onChange={(login) => setInfo((init) => ({ ...init, login }))}
                         />
                         <Input
                             label="Senha"
                             name="password-input"
                             type={showPassword ? 'text' : 'password'}
                             value={info.password}
+                            onChange={(password) => setInfo((init) => ({ ...init, password }))}
                             InputProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
-                                        <IconButton edge="end" onClick={() => setShowPassword(init => !init)} >
+                                        <IconButton edge="end" onClick={() => setShowPassword((init) => !init)} >
                                             <Visibility />
                                         </IconButton>
                                     </InputAdornment>
@@ -52,10 +59,10 @@ const Activity = () => {
                         />
                         <StyledText>
                             Esqueci a senha
-                    </StyledText>
-                        <StyledButton variant="contained" color="primary" >
+                        </StyledText>
+                        <StyledButton variant="contained" color="primary" onClick={auth} >
                             Acessar
-                </StyledButton>
+                        </StyledButton>
                     </div>
                 </AuthContainer>
             </Container>
@@ -63,4 +70,8 @@ const Activity = () => {
     )
 }
 
-export default Activity
+Login.propTypes = {
+    history: PropTypes.object,
+}
+
+export default Login
