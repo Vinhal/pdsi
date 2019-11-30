@@ -4,6 +4,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@material-ui/core": "^4.7.0",
+    "@material-ui/icons": "^4.5.1",
     "formik": "^1.5.8",
     "lodash.defaultsdeep": "^4.6.1",
     "moment": "^2.24.0",
