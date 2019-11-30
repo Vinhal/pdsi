@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import TableRow from '@material-ui/core/TableRow'
 import TableBody from '@material-ui/core/TableBody'
 import IconButton from '@material-ui/core/IconButton'
-import MoreVertIcon from '@material-ui/icons/MoreVert'
+import EditIcon from '@material-ui/icons/Edit'
 import TableCell from '@material-ui/core/TableCell'
 import { RowTableCell } from './style'
 
@@ -31,7 +31,7 @@ const Body = ({
                         component={RowTableCell}
                         align="right">
                         <IconButton id={`${id}-row-${index}-onEdit`} onClick={() => onEdit(row)} >
-                            <MoreVertIcon />
+                            <EditIcon size="small" color="primary" />
                         </IconButton>
                     </TableCell>
                 )}

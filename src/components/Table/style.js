@@ -20,6 +20,9 @@ const RowTableCell = styled(TableCell)`
         color: ${({ theme }) => theme.palette.common.black};
         font-weight: normal;
         border: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 5px;
     }
 `
 
