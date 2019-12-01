@@ -35,9 +35,14 @@ const UpdateMedic = ({ history }) => {
 
     return (
         <div style={{ margin: '10px 50px' }}>
-            <Text variant="h6">Cadastro de Médico</Text>
+            <Text variant="h6">
+                {id ? 'Editar Médico' : 'Cadastro de Médico'}
+            </Text>
             <Text color="textSecondary" style={{ marginBottom: '10px' }}>
-                Informe os dados do médico que deseja inserir
+                {id
+                    ?  'Informe os dados do médico que deseja editar'
+                    :  'Informe os dados do médico que deseja inserir'
+                }
             </Text>
 
             <Formik

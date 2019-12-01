@@ -5,6 +5,7 @@ import Tab from '@material-ui/core/Tab'
 import IconButton from '@material-ui/core/IconButton'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Visibility from '@material-ui/icons/Visibility'
+import userApi from 'resources/user'
 import Input from 'components/Input'
 import Logo from 'assets/images/pocket-logo.png'
 import {
@@ -21,7 +22,7 @@ const Login = ({ history }) => {
     const [info, setInfo] = useState({ login: '', password: '' })
 
     const auth = () => {
-        history.push('/')
+        userApi.login(info.login, info.password).then(() => history.push('/'))
     }
 
     return (
@@ -60,7 +61,7 @@ const Login = ({ history }) => {
                         <StyledButton
                             variant="contained"
                             color="secondary"
-                            onClick={() => history.push('/')}
+                            onClick={auth}
                         >
                             Acessar
                         </StyledButton>
