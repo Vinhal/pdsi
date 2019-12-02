@@ -38,7 +38,7 @@ const AppBar = ({ openSidebar, title, hasLogin }) => (
 AppBar.propTypes = {
     openSidebar: PropTypes.func,
     hasLogin: PropTypes.bool.isRequired,
-    title: PropTypes.string
+    title: PropTypes.string,
 }
 
 export default AppBar
