@@ -5,7 +5,7 @@ import Tab from '@material-ui/core/Tab'
 import IconButton from '@material-ui/core/IconButton'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Visibility from '@material-ui/icons/Visibility'
-import { setToken } from 'commons/utils/auth'
+import { saveToken } from 'commons/utils/auth'
 import userApi from 'resources/user'
 import Input from 'components/Input'
 import Logo from 'assets/images/pocket-logo.png'
@@ -24,7 +24,7 @@ const Login = ({ history }) => {
 
     const auth = () => {
         userApi.login(info.login, info.password).then(({ token }) => {
-            setToken(token)
+            saveToken(token)
             history.push('/')
         })
     }
