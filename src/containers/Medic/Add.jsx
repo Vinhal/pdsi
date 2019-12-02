@@ -35,6 +35,8 @@ const UpdateMedic = ({ history }) => {
         doctorApi.registerDoctor(values).then(() => {
             toast.success('Médico registrado com sucesso!')
             history.goBack()
+        }).catch(err => {
+            toast.error(`Erro: ${err.response.data.err}`)
         })
     }
 

@@ -30,7 +30,6 @@
     "test": "react-scripts test --watchAll=false --silent --maxWorkers=2 --logHeapUsage",
     "eslint": "eslint src/"
   },
-
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
