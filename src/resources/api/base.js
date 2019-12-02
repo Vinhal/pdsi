@@ -1,10 +1,12 @@
 import axios from 'axios'
 import qs from 'qs'
 import defaultsDeep from 'lodash.defaultsdeep'
+import { getToken } from 'commons/utils/auth'
 
 const getConfig = () => ({
     headers: {
         'Accept': 'application/json',
+        'x-access-token': getToken(),
     },
     loader: true,
     paramsSerializer: (params) => qs.stringify(params, { arrayFormat: 'repeat' })
