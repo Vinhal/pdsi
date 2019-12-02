@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import Text from '@material-ui/core/Typography'
 import Button from 'components/Button'
 import Input from 'components/Input'
+import doctorApi from 'resources/doctor'
 import { ButtonContainer } from './style'
 
 const initialValues = {

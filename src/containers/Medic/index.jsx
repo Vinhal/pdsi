@@ -5,6 +5,7 @@ import Text from '@material-ui/core/Typography'
 import withTable from 'components/Table/withTable'
 import Table from 'components/Table'
 import Button from 'components/Button'
+import doctorApi from 'resources/doctor'
 
 const headers = ['Nome', 'CRM', 'Hospital', 'Especilidade', 'Valor da Consulta']
 const rowNames = ['name', 'crm' , 'work', 'specialty', 'consultValue']
@@ -34,7 +35,7 @@ const Home = ({
             ],
         })
     }, [])
-
+    
     return (
         <div style={{ margin: '10px 50px'}}>
             <Text variant="h6">Gerenciamento de Médicos</Text>
