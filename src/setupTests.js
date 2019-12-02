@@ -1,8 +1,5 @@
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import 'jest-styled-components';
-import localStorage from 'unit-test/mock/local-storage'
+import { configure } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import 'jest-styled-components'
 
-configure({ adapter: new Adapter() });
-
-global.localStorage = localStorage()
+configure({ adapter: new Adapter() })

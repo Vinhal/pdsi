@@ -32,7 +32,6 @@ const UpdateMedic = ({ history }) => {
     }, [id])
 
     const handleSave = (values) => {
-        console.log('SUBMITTED', values)
         doctorApi.registerDoctor(values).then(() => {
             toast.success('Médico registrado com sucesso!')
             history.goBack()

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match Input snapshot 1`] = `
+<WithStyles(ForwardRef(TextField))
+  InputLabelProps={
+    Object {
+      "shrink": true,
+    }
+  }
+  margin="normal"
+  onChange={[Function]}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  variant="outlined"
+/>
+`;
