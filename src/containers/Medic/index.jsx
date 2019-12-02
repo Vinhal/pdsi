@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Paper from '@material-ui/core/Paper'
 import Text from '@material-ui/core/Typography'
+import doctorApi from 'resources/doctor'
 import withTable from 'components/Table/withTable'
 import Table from 'components/Table'
 import Button from 'components/Button'
-import doctorApi from 'resources/doctor'
 
 const headers = ['Nome', 'CRM', 'Hospital', 'Especilidade', 'Valor da Consulta']
 const rowNames = ['name', 'crm' , 'work', 'specialty', 'consultValue']
@@ -23,17 +23,18 @@ const Home = ({
 }) => {
 
     useEffect(() => {
-        setSource({
-            count: 10,
-            datasource: [
-                { id: 2, name: 'Ritiopa', work: 'SUS', specialty: 'Butecologista', crm: '00000000-0', consultValue: 'R$ 10,00' },
-                { id: 3, name: 'Dudis', work: 'Madrecor', specialty: 'Odontologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
-                { id: 1, name: 'Japa do Japão', work: 'PetShop', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
-                { id: 4, name: 'Vinal', work: 'Madrecor', specialty: 'Nenhuma', crm: '00000000-0', consultValue: 'R$ 1000,00' },
-                { id: 4, name: 'Mataus', work: 'SUS', specialty: 'Ginecologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
-                { id: 4, name: 'Louis', work: 'Madrecor', specialty: 'Nutricionista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
-            ],
-        })
+        doctorApi.getAllDoctors().then((datasource) => setSource({ datasource }))
+        // setSource({
+        //     count: 10,
+        //     datasource: [
+        //         { id: 2, name: 'Ritiopa', work: 'SUS', specialty: 'Butecologista', crm: '00000000-0', consultValue: 'R$ 10,00' },
+        //         { id: 3, name: 'Dudis', work: 'Madrecor', specialty: 'Odontologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+        //         { id: 1, name: 'Japa do Japão', work: 'PetShop', specialty: 'Urologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+        //         { id: 4, name: 'Vinal', work: 'Madrecor', specialty: 'Nenhuma', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+        //         { id: 4, name: 'Mataus', work: 'SUS', specialty: 'Ginecologista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+        //         { id: 4, name: 'Louis', work: 'Madrecor', specialty: 'Nutricionista', crm: '00000000-0', consultValue: 'R$ 1000,00' },
+        //     ],
+        // })
     }, [])
     
     return (
