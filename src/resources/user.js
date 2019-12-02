@@ -1,10 +1,10 @@
 import Api from './api/api'
 
-const path = '/users'
+const loginPath = '/api/login'
 
 const UserApi = {
     login: (username, password) => (
-        Api.post(`${path}/login`, { username, password })
+        Api.post(loginPath, { username, password })
     )
 }
 
