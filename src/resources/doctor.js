@@ -4,10 +4,10 @@ const path = '/api/doctor'
 
 const DoctorApi = {
     getAllDoctors: () => (
-        Api.get(`${path}/`)
+        Api.get(path)
     ),
     registerDoctor: (doctor) => (
-        Api.post(`${path}/login`, { doctor })
+        Api.post(path, doctor)
     )
 }
 

@@ -4,6 +4,7 @@ import { Formik, Form } from 'formik'
 import { useParams } from "react-router-dom"
 import Grid from '@material-ui/core/Grid'
 import Text from '@material-ui/core/Typography'
+import toast from 'commons/utils/toast'
 import Button from 'components/Button'
 import Input from 'components/Input'
 import doctorApi from 'resources/doctor'
@@ -32,6 +33,10 @@ const UpdateMedic = ({ history }) => {
 
     const handleSave = (values) => {
         console.log('SUBMITTED', values)
+        doctorApi.registerDoctor(values).then(() => {
+            toast.success('Médico registrado com sucesso!')
+            history.goBack()
+        })
     }
 
     return (
